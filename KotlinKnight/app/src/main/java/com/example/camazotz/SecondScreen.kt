@@ -23,78 +23,78 @@ class SecondScreen : AppCompatActivity(){
         image.setOnClickListener {
             openBook(
                 1,
-                "Food",
-                100,
-                R.drawable.img
+                "Masala Maggie",
+                40,
+                R.drawable.img_10
             )
         }
 
         image2.setOnClickListener {
             openBook(
                 2,
-                "Food",
-                100,
-                R.drawable.img
+                "Vegetable Maggie",
+                60,
+                R.drawable.img_9
             )
         }
 
         image3.setOnClickListener {
             openBook(
                 3,
-                "Food", 100,
-                R.drawable.img
+                "Korean Chilli Maggie", 80,
+                R.drawable.img_8
             )
         }
         image4.setOnClickListener {
             openBook(
                 4,
-                "Food",
+                "Oreo Shake",
                 100,
-                R.drawable.img
+                R.drawable.img_2
             )
         }
 
         image5.setOnClickListener {
             openBook(
                 5,
-                "Food",
+                "Butterscotch Shake",
                 100,
-                R.drawable.img
+                R.drawable.img_3
             )
         }
 
         image6.setOnClickListener {
             openBook(
                 6,
-                "food",
-                100,
-                R.drawable.img
+                "Chocolate Coffee with Ice cream",
+                120,
+                R.drawable.img_4
             )
         }
 
         image7.setOnClickListener {
             openBook(
                 7,
-                "food",
+                "Maregherita Pizza",
                 100,
-                R.drawable.img
+                R.drawable.img_5
             )
         }
 
         image8.setOnClickListener {
             openBook(
                 8,
-                "food",
-                100,
-                R.drawable.img
+                "Farmhouse Pizza",
+                150,
+                R.drawable.img_6
             )
         }
         image9.setOnClickListener {
             openBook(
                 9,
-                "food",
-                100,
-                R.drawable.img
+                "Thin crust Burrata",
+                180,
+                R.drawable.img_7
             )
         }
     }

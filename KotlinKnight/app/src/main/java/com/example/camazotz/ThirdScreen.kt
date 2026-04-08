@@ -60,7 +60,7 @@ class ThirdScreen : AppCompatActivity() {
 
         val back =findViewById<ImageView>(R.id.backBtn)
         back.setOnClickListener {
-            val intent= Intent(this, MainActivity::class.java)
+            val intent= Intent(this, SecondScreen::class.java)
             startActivity(intent)
         }
 
