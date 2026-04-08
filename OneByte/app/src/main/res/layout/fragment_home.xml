@@ -35,28 +35,13 @@
 
                 <TextView
                     android:id="@+id/description"
-                    android:layout_width="10dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:text="Walk into the exam like you’ve already seen the paper."
                     android:textColor="?attr/colorOnSurface"
-                    android:textSize="17sp"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginEnd="5dp"
-                    app:layout_constraintEnd_toStartOf="@id/imageView"
-                    app:layout_constraintStart_toStartOf="@id/view"
-                    app:layout_constraintTop_toTopOf="@id/view" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="134dp"
-                    android:layout_height="133dp"
-                    android:layout_marginTop="404dp"
-                    android:layout_marginEnd="15dp"
-                    android:src="@drawable/img_2"
-                    app:layout_constraintEnd_toEndOf="@id/view"
-                    app:layout_constraintStart_toEndOf="@id/description"
-                    app:layout_constraintTop_toTopOf="@id/view" />
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="105dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <TextView
                     android:id="@+id/subHeading"
@@ -153,10 +138,9 @@
                         android:id="@+id/dbmsIcon"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="7dp"
                         android:src="@drawable/baseline_cancel_red"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        tools:layout_editor_absoluteX="2dp"
+                        tools:layout_editor_absoluteY="-3dp" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -198,7 +182,7 @@
                         android:id="@+id/dbmsBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="36dp"
                         android:backgroundTint="#832607"
                         android:padding="8dp"
                         android:text="Let's Practice"
@@ -233,7 +217,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:text="Computional Thinking Through sleeping"
+                        android:text="Computional Thinking Through Programming"
                         android:textColor="#B792EF"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -246,7 +230,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Don't Practice Importic CTTP Questions"
+                        android:text="Practice important CTTP Questions"
                         android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="10sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -314,7 +298,7 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="--- Abu Dhabi"
+                        android:text="---Abu Dhabi"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="17sp"
                         android:textStyle="bold"

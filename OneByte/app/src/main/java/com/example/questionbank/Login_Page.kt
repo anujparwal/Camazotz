@@ -92,7 +92,7 @@ class Login_Page : AppCompatActivity() {
             isVerified=false
             tvStatus.text = "Verified"
             tvStatus.setTextColor(resources.getColor((android.R.color.holo_red_dark)))
-//            tvStatus.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_24,0,0,0)
+            tvStatus.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_24,0,0,0)
         }
 
         val sharedPref = getSharedPreferences("userdata",MODE_PRIVATE)

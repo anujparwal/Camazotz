@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BookmarkFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -46,49 +46,49 @@
                             android:id="@+id/dbmsHeading"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:textColor="@color/black"
                             android:text="DBMS"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
                             android:textStyle="bold"
-                            android:textSize="20sp"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
 
                         <!--            android:text="No Bookmarks Yet"-->
                         <TextView
                             android:id="@+id/noBookmark"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text=""
-                            android:textSize="18sp"
                             android:textColor="?attr/colorOnSurfaceVariant"
-                            app:layout_constraintTop_toBottomOf="@id/dbmsHeading"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="15dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dbmsHeading"/>
 
                         <TextView
                             android:id="@+id/dbms1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text=""
-                            android:textSize="18sp"
                             android:textColor="?attr/colorOnSurfaceVariant"
-                            app:layout_constraintTop_toBottomOf="@id/dbmsHeading"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="15dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dbmsHeading"/>
                         <TextView
                             android:id="@+id/dbms2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text=""
-                            android:textSize="18sp"
                             android:textColor="?attr/colorOnSurfaceVariant"
-                            app:layout_constraintTop_toBottomOf="@id/dbms1"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="15dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dbms1"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,13 +101,13 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="30dp"
                     app:cardCornerRadius="30dp"
                     app:cardElevation="10dp"
-                    android:layout_marginBottom="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/cardView"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintTop_toBottomOf="@id/cardView">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -119,49 +119,49 @@
                             android:id="@+id/cttpHeading"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:textColor="@color/purple"
                             android:text="Singing"
+                            android:textColor="@color/purple"
+                            android:textSize="20sp"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <!--            android:text="No Bookmarks Yet"-->
                         <TextView
                             android:id="@+id/noBookmark1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text=""
-                            android:textSize="18sp"
                             android:textColor="?attr/colorOnSurfaceVariant"
-                            app:layout_constraintTop_toBottomOf="@id/cttpHeading"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="15dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cttpHeading"/>
 
                         <TextView
                             android:id="@+id/cttp1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text=""
-                            android:textSize="18sp"
                             android:textColor="?attr/colorOnSurfaceVariant"
-                            app:layout_constraintTop_toBottomOf="@id/cttpHeading"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="15dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cttpHeading"/>
                         <TextView
                             android:id="@+id/cttp2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:text=""
-                            android:textSize="18sp"
                             android:textColor="?attr/colorOnSurfaceVariant"
-                            app:layout_constraintTop_toBottomOf="@id/cttp1"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="15dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cttp1"/>
 
                         <TextView
                             android:id="@+id/bookmarkHeading"
