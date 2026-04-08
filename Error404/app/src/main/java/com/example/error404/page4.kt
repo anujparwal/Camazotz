@@ -4,10 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class page4 : AppCompatActivity() {
+
+    private var clickCount = 0
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,39 +20,21 @@ class page4 : AppCompatActivity() {
         val btnAccept = findViewById<Button>(R.id.btnAccept)
         val btnReject = findViewById<Button>(R.id.btnReject)
 
-        val btnAge = findViewById<TextView>(R.id.tv_label_name)
-        val btnEmail = findViewById<TextView>(R.id.tv_label_email)
-
         btnConfirm.setOnClickListener {
-            val intent = Intent(this, page3::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, page3::class.java))
         }
         btnReject.setOnClickListener {
-            val intent = Intent(this, page2::class.java)
-            startActivity(intent)
-        }
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, page4::class.java)
-            startActivity(intent)
-        }
-        btnAccept.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        // In your MainActivity.kt
-        var clickCount = 0
-
-        btnReject.setOnClickListener {
-            clickCount++ // Increment counter on each click
-
-            if (clickCount == 5) {
-                // Define the target page (SecondActivity)
-                val intent = Intent(this, Game1::class.java)
-                startActivity(intent) // Navigate to the next page
-
-                // Optional: Reset count if you don't want it to trigger again immediately
+            clickCount++
+            if (clickCount >= 5) {
+                startActivity(Intent(this, Game1::class.java))
                 clickCount = 0
             }
+        }
+        btnCancel.setOnClickListener {
+            startActivity(Intent(this, page4::class.java))
+        }
+        btnAccept.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

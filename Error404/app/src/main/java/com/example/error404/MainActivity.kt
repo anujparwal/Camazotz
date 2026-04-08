@@ -3,7 +3,6 @@ package com.example.error404
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,22 +19,24 @@ class MainActivity : AppCompatActivity() {
         val btnAccept = findViewById<Button>(R.id.btnAccept)
         val btnReject = findViewById<Button>(R.id.btnReject)
 
+        // Proper navigation flow
         btnConfirm.setOnClickListener {
-            val intent = Intent(this, page2::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, page2::class.java))
         }
+
         btnAccept.setOnClickListener {
-            val intent = Intent(this, page3::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, page3::class.java))
         }
+
         btnCancel.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            // Cancel usually clears or goes back; here it resets the screen
+            recreate()
         }
+
         btnReject.setOnClickListener {
-            val intent = Intent(this, page4::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, page4::class.java))
         }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

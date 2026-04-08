@@ -16,19 +16,12 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btn0.setOnClickListener(this)
-        binding.btn1.setOnClickListener(this)
-        binding.btn2.setOnClickListener(this)
-        binding.btn3.setOnClickListener(this)
-        binding.btn4.setOnClickListener(this)
-        binding.btn5.setOnClickListener(this)
-        binding.btn6.setOnClickListener(this)
-        binding.btn7.setOnClickListener(this)
-        binding.btn8.setOnClickListener(this)
+        // Set click listeners for the 3x3 grid
+        val buttons = arrayOf(binding.btn0, binding.btn1, binding.btn2, binding.btn3,
+            binding.btn4, binding.btn5, binding.btn6, binding.btn7, binding.btn8)
+        buttons.forEach { it.setOnClickListener(this) }
 
-        binding.startGameBtn.setOnClickListener {
-            startGame()
-        }
+        binding.startGameBtn.setOnClickListener { startGame() }
 
         GameData.gameModel.observe(this) {
             gameModel = it
@@ -38,57 +31,40 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun setUI() {
         gameModel?.apply {
-            binding.btn0.text = filledPos[1]
-            binding.btn1.text = filledPos[4]
-            binding.btn2.text = filledPos[3]
-            binding.btn3.text = filledPos[2]
-            binding.btn4.text = filledPos[7]
-            binding.btn5.text = filledPos[8]
-            binding.btn6.text = filledPos[0]
-            binding.btn7.text = filledPos[5]
-            binding.btn8.text = filledPos[6]
 
-            binding.startGameBtn.visibility = View.VISIBLE
+            val buttons = arrayOf(binding.btn0, binding.btn1, binding.btn2, binding.btn3,
+                binding.btn4, binding.btn5, binding.btn6, binding.btn7, binding.btn8)
+
+            filledPos.forEachIndexed { index, value ->
+                buttons[index].text = value
+            }
+
+            binding.startGameBtn.visibility = if (gameStatus == GameStatus.JOINED || gameStatus == GameStatus.FINISHED) View.VISIBLE else View.INVISIBLE
 
             binding.gameStatusText.text = when (gameStatus) {
-                GameStatus.CREATED -> {
-                    binding.startGameBtn.visibility = View.INVISIBLE
-                    "Game ID: $gameId"
-                }
-                GameStatus.JOINED -> "Click Hakunka Matata Game"
-                GameStatus.INPROGRESS -> {
-                    binding.startGameBtn.visibility = View.INVISIBLE
-                    "Past Turn: $currentPlayer"
-                }
-                GameStatus.FINISHED -> {
-                    if (winner.isNotEmpty()) "$winner LOST!" else "Happy Birthday!!"
-                }
+                GameStatus.CREATED -> "Game ID: $gameId"
+                GameStatus.JOINED -> "Ready to Start!"
+                GameStatus.INPROGRESS -> "Current Turn: $currentPlayer"
+                GameStatus.FINISHED -> if (winner.isNotEmpty()) "$winner Wins!" else "It's a Draw!"
             }
         }
     }
 
     private fun startGame() {
         gameModel?.apply {
-            updateGameData(
-                GameModel(
-                    gameId = gameId,
-                    gameStatus = GameStatus.INPROGRESS
-                )
-            )
+            updateGameData(GameModel(gameId = gameId, gameStatus = GameStatus.INPROGRESS))
         }
     }
 
     override fun onClick(v: View?) {
         gameModel?.apply {
-            if (gameStatus != GameStatus.INPROGRESS) {
-                Toast.makeText(applicationContext, "There is no game", Toast.LENGTH_SHORT).show()
-                return
-            }
+            if (gameStatus != GameStatus.INPROGRESS) return
 
             val clickedPos = (v?.tag as String).toInt()
             if (filledPos[clickedPos].isEmpty()) {
                 filledPos[clickedPos] = currentPlayer
-                currentPlayer = if (currentPlayer == "X") "X" else "O"
+                // FIXED: Toggle turn properly
+                currentPlayer = if (currentPlayer == "X") "O" else "X"
                 checkForWinner()
                 updateGameData(this)
             }
