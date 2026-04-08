@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Myapp</string>
+    <string name="button_description">0</string>
 </resources>

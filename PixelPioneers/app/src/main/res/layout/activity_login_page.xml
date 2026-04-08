@@ -5,7 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/apploginbg"
     tools:context=".LoginPage">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,22 +18,61 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MindSpark"
-            />
+            android:fontFamily="sans-serif-black"
+            android:text="Mind"
+            android:paddingTop="30dp"
+            android:paddingRight="200dp"
+            android:textAlignment="center"
+            android:textAppearance="@color/design_default_color_surface"
+            android:textColor="#FFBB00"
+            android:textColorHighlight="@color/black"
+            android:textSize="81sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Spark"
+            android:paddingLeft="100dp"
+            android:textAlignment="center"
+            android:textAppearance="@color/design_default_color_surface"
+            android:textColor="#FFBB00"
+            android:textColorHighlight="@color/black"
+            android:paddingBottom="20dp"
+            android:textSize="81sp"
+            android:textStyle="italic" />
+
+
+        <LinearLayout
+        android:background="@drawable/sub_transparent_bg"
+        android:layout_width="380dp"
+        android:layout_height="420dp"
+          android:layout_marginVertical="30sp"
+        android:orientation="vertical"
+          android:paddingTop="25dp"
+        android:gravity="center_horizontal">
+
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="50dp"
             android:hint="Username"
-            android:inputType="textPassword"
+            android:fontFamily="sans-serif-smallcaps"
+            android:inputType="textCapSentences"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:padding="13dp" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textPassword"
+            android:hint="E-mail"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
             android:layout_marginTop="16dp"
             android:padding="13dp" />
 
@@ -40,7 +81,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:inputType="textCapSentences"
+            android:inputType="textPassword"
+            android:textColorHint="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"
             android:padding="13dp" />
 
@@ -49,24 +93,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
+            android:textColorHint="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
             android:layout_marginTop="16dp"
             android:padding="13dp" />
 
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_marginTop="24dp" />
-
-        <ImageView
-            android:id="@+id/myImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/images"
-            android:contentDescription="Image Description" />
+          <Button
+              android:id="@+id/submitButton"
+              android:layout_width="250dp"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="50dp"
+              android:textStyle="bold"
+              android:fontFamily="sans-serif-smallcaps"
+              android:text="SUBMIT" />
 
 
+
+
+
+      </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

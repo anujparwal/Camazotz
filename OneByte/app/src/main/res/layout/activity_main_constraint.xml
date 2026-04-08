@@ -31,9 +31,9 @@
 
                 <TextView
                     android:id="@+id/wlcmTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:drawableStart="@drawable/outline_account_circle_24"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"

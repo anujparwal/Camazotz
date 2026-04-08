@@ -36,7 +36,8 @@
                 app:iconTint="?attr/colorIcon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.079" />
 
             <TextView
                 android:id="@+id/questionText"
@@ -48,10 +49,10 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.437"
+                app:layout_constraintHorizontal_bias="0.447"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.255" />
+                app:layout_constraintVertical_bias="0.116" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/bookmarkButton"
@@ -70,13 +71,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="136dp"
-                android:layout_height="136dp"
-                android:src="@drawable/fan"
-                tools:layout_editor_absoluteX="48dp"
-                tools:layout_editor_absoluteY="114dp" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What will be the output of the following C code?\nint x = 5;\nprintf(&quot;%d&quot;, x++);"
+                android:textColor="#F1F0F2"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="55dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -116,21 +120,6 @@
                 app:layout_constraintEnd_toEndOf="@id/view2"
                 app:layout_constraintTop_toTopOf="@id/view2" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="What will be the output of the following C code?\nint x = 5;\nprintf(&quot;%d&quot;, x++);"
-                android:textColor="#F1F0F2"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="10dp"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/view2"
-                app:layout_constraintTop_toBottomOf="@id/quesNo"
-                />
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
@@ -145,8 +134,8 @@
                 app:cardCornerRadius="30dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:background="@drawable/graduation_cap_icon"
                     android:padding="20dp">
 
@@ -267,7 +256,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="30dp" />
+                tools:layout_editor_absoluteY="8dp" />
 
             <RadioButton
                 android:id="@+id/optn3"
@@ -290,6 +279,13 @@
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="-16dp"
                 tools:layout_editor_absoluteY="134dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:src="@drawable/fan"
+                tools:layout_editor_absoluteX="145dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
