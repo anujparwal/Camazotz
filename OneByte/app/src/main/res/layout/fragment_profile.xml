@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:text="Concat Dial"
                     android:textColor="@color/red"
-                    android:textSize="78sp"
+                    android:textSize="34sp"
                     app:layout_constraintBottom_toTopOf="@+id/phoneImage"
                     app:layout_constraintTop_toBottomOf="@+id/imageView"
                     app:layout_constraintVertical_bias="0.32"
@@ -101,14 +101,12 @@
                     android:id="@+id/emailtextHeading"
                     android:layout_width="0dp"
                     android:layout_height="36dp"
-                    android:layout_marginStart="268dp"
-                    android:layout_marginTop="-5dp"
                     android:text="Name"
                     android:textColor="?attr/colorOnBackground"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/emailImage"
-                    app:layout_constraintTop_toTopOf="@id/emailImage" />
+                    tools:layout_editor_absoluteX="315dp"
+                    tools:layout_editor_absoluteY="437dp" />
 
                 <TextView
                     android:id="@+id/emailText"
@@ -165,15 +163,12 @@
                     android:id="@+id/personalText"
                     android:layout_width="382dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="132dp"
                     android:text="Question 3 "
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="italic"
-                    app:layout_constraintBottom_toTopOf="@+id/phoneImage"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/contactText"
-                    app:layout_constraintVertical_bias="1.0" />
+                    tools:layout_editor_absoluteX="15dp"
+                    tools:layout_editor_absoluteY="462dp" />
 
                 <ImageView
                     android:id="@+id/ageImage"
